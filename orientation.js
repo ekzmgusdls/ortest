@@ -1,4 +1,3 @@
-window.addEventListener('deviceorientation', handleOrientation, true);
 function handleOrientation(event) {
     var absolute = event.absolute;
     var alpha = event.alpha;
@@ -8,3 +7,8 @@ function handleOrientation(event) {
     document.getElementById('test').innerText = `absolute: ${absolute}, alpha: ${alpha}, beta: ${beta}, amma: ${gamma}`;
     // Do stuff with the new orientation data
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('deviceorientation', handleOrientation, true);
+    document.getElementById('do').innerText = 'Now this is doing';
+});
